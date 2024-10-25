@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Sheikh Badar, specializing in Statistical Modelling, Sports Analytics, and Machine Learning.">
+    <title>Sheikh Badar | Researcher & Freelance Writer</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+
+
+
+
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.7;
+            overflow-x: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 0.75rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #008080;
+            color: #fff;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #FFE4E1; /* Vibrant red */
+            opacity: 0; /* Start invisible */
+            transform: scale(0.8); /* Start smaller */
+            animation: fadeInScale 1s forwards; /* Animation name and duration */
+        }
+
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0; /* Invisible */
+                transform: scale(0.8); /* Smaller size */
+            }
+            100% {
+                opacity: 1; /* Fully visible */
+                transform: scale(1); /* Normal size */
+            }
+        }
+
+        header p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Navbar Styles */
+        nav {
+            margin-bottom: 2rem; /* Add some spacing below the navbar */
+        }
+
+        .navbar {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .navbar li a {
+            background-color: #F0F0F0   ; /* Button background color */
+            color: #2C3E50  ; /* Text color */
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar li a:hover {
+            background-color: #0056b3 ; /* Darker color on hover */
+            color: #fff;
+        }
+
+        /* Section Styles */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 3rem auto;
+            text-align: center;
+        }
+
+        .container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .container p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+
+        .grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .research-area {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .research-area:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .research-area h3 {
+            color: #2980b9;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .research-area p {
+            color: #7f8c8d;
+            font-weight: 300;
+        }
+
+       /* Container styles */
+.container {
+    max-width: 800px; /* Limit the width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding */
+}
+
+/* Publication card styles */
+.publication {
+    background-color: #ffffff;
+    border: none; /* Remove border for a cleaner look */
+    border-radius: 8px; /* Slightly reduce border radius */
+    padding: 15px; /* Reduce padding for compactness */
+    margin: 15px 0; /* Adjust margins */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for publication cards */
+.publication:hover {
+    transform: translateY(-3px); /* Slight lift */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Title styling */
+.title a {
+    font-weight: bold;
+    font-size: 1.3em; /* Slightly reduce font size */
+    color: #007bff; /* Change to a softer blue */
+    text-decoration: none;
+}
+
+/* Title hover effect */
+.title a:hover {
+    text-decoration: underline; /* Underline on hover for clarity */
+}
+
+/* Author styles */
+.authors {
+    font-size: 0.95em; /* Slightly smaller font size */
+    color: #666; /* Softer gray */
+    margin: 5px 0; /* Spacing */
+}
+
+/* Journal and year styles */
+.journal, .year {
+    font-size: 0.95em; /* Consistent font size */
+    color: #999; /* Lighter gray */
+}
+
+/* Citation styles */
+.citation {
+    font-size: 0.85em;
+    color: #dc3545; /* Red for visibility */
+}
+
+/* Link button styles */
+.link {
+    display: inline-block;
+    margin-top: 10px; /* Less margin for compactness */
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 8px 12px; /* Adjust padding */
+    border-radius: 5px; /* Slightly less rounding */
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+/* Link button hover effect */
+.link:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Icon styles */
+.icon {
+    margin-right: 5px; /* Reduced margin */
+    color: #ffffff; /* Ensure icons are white */
+}
+
+
+        /* Contact Section */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        input, textarea {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        button {
+            padding: 0.75rem 1.5rem;
+            background-color: #2980b9;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+            max-width: 200px;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: #e74c3c;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #008080; /* Teal background */
+            color: #ffffff; /* White text */
+            padding: 1.5rem 0;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        footer p {
+            margin-bottom: 1rem;
+        }
+        .social-icons {
+            margin-top: 1rem;
+        }
+        .social-icons a {
+            color: #ffffff; /* White color for social icons */
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+        .social-icons a:hover {
+            color: #f0ad4e; /* Yellow-orange on hover */
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header, section, footer {
+            animation: fadeIn 0.7s ease-in-out;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#about" class="nav-button">About</a></li>
+                <li><a href="#research" class="nav-button">Research</a></li>
+                <li><a href="#publications" class="nav-button">Publications</a></li>
+                <li><a href="#contact" class="nav-button">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-content">
+            <h1>Sheikh Badar Ud Din Tahir</h1>
+            <p>Machine Learning | Sports Analytics | Healthcare | Statistics</p>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+
+
+            <p>Sheikh Badar Ud Din Tahir is dedicated researcher specializing in <strong> Statistics, healthcare, Sports Analytics, and Machine Learning </strong>. Sheikh leverages data-driven techniques to extract insights in sports, contributing to cutting-edge solutions and advanced methodologies in the field. </p>
+
+<p> An accomplished researcher, he focuses on AI and machine learning, with expertise in predictive modeling, statistical modelling, deep learning, IoT, sensors, and signal processing. Sheikh's impactful research, published in leading journals, has attained over <strong> 530 citations </strong>, reflecting his significant academic and practical contributions.</p>
+        </div>
+    </section>
+
+    <section id="research">
+        <div class="container">
+            <h2>Research Focus</h2>
+            <div class="grid">
+                <div class="research-area">
+                    <h3>Artificial Intelligence</h3>
+                    <p>Leveraging AI and machine learning and data analysis to uncover insights in image, videos, signal, and sports data.</p>
+                </div>
+                <div class="research-area">
+                    <h3>Healthcare</h3>
+                    <p>Investigating machine learning applications in healthcare data analytics, with a focus on predictive modelling and patient outcomes.</p>
+                </div>
+                <div class="research-area">
+                    <h3>Statistical Modelling</h3>
+                    <p>Utilizing advanced statistical methods for data analysis and interpretation to inform decision-making processes in various sectors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications">
+        <div class="container">
+            <h1>My Publications</h1>
+
+    <div class="publication">
+        <span class="title"><a href="https://ieeexplore.ieee.org/document/9426893" target="_blank">Monitoring real-time personal locomotion behaviors over smart indoor-outdoor environments via body-worn sensors</a></span><br>
+        <span class="authors">M Gochoo, SB ud din Tahir, A Jalal, K Kim</span><br>
+        <span class="journal">IEEE Access</span>, <span class="year">2021</span><br>
+        <span class="citation">Cited by 67</span><br>
+        <a href="https://ieeexplore.ieee.org/document/9426893" class="link" target="_blank"><i class="fas fa-file-alt icon"></i>View Article</a>
+    </div>
+
+    <div class="publication">
+        <span class="title"><a href="https://www.techscience.com/cmc/v75n1/51517" target="_blank">Human Verification over Activity Analysis via Deep Data Mining</a></span><br>
+        <span class="authors">K Abhishek, SB ud din Tahir</span><br>
+        <span class="journal">Computers, Materials and Continua, Tech Science Press</span>, <span class="year">2023</span><br>
+        <span class="citation">Cited by 5</span><br>
+        <a href="https://www.techscience.com/cmc/v75n1/51517" class="link" target="_blank"><i class="fas fa-file-alt icon"></i>View Article</a>
+    </div>
+
+    <div class="publication">
+        <span class="title"><a href="https://peerj.com/articles/cs-1619/" target="_blank">Hand gesture recognition via deep data optimization and 3D reconstruction</a></span><br>
+        <span class="authors">Z Mustafa, H Nsour, SB ud din Tahir</span><br>
+        <span class="journal">PeerJ Computer Science</span>, <span class="year">2023</span><br>
+        <span class="citation">Cited by 1</span><br>
+        <a href="https://peerj.com/articles/cs-1619/" class="link" target="_blank"><i class="fas fa-file-alt icon"></i>View Article</a>
+    </div>
+
+    <div class="publication">
+        <span class="title"><a href="https://www.mdpi.com/1099-4300/22/5/579" target="_blank">Wearable inertial sensors for daily activity analysis based on adam optimization and the maximum entropy Markov model</a></span><br>
+        <span class="authors">SB ud din Tahir, A Jalal, K Kim</span><br>
+        <span class="journal">Entropy</span>, <span class="year">2023</span><br>
+        <span class="citation">Cited by 122</span><br>
+        <a href="https://www.mdpi.com/1099-4300/22/5/579" class="link" target="_blank"><i class="fas fa-file-alt icon"></i>View Article</a>
+    </div>
+
+    <div class="publication">
+        <span class="title"><a href="https://onlinelibrary.wiley.com/doi/10.1155/2023/9822428" target="_blank">Anomaly Prediction over Human Crowded Scenes via Associate-Based Data Mining and K-Ary Tree Hashing</a></span><br>
+        <span class="authors">A Yasin, SB ud din Tahir, J Frnda, R Fatima, J Ali Khan, MS Anwar</span><br>
+        <span class="journal">International Journal of Intelligent Systems, Wiley</span>, <span class="year">2023</span><br>
+        <span class="citation">Cited by 4</span><br>
+        <a href="https://onlinelibrary.wiley.com/doi/10.1155/2023/9822428" class="link" target="_blank"><i class="fas fa-file-alt icon"></i>View Article</a>
+    </div>
+
+    <div class="publication">
+        <span class="title"><a href="https://www.mdpi.com/1424-8220/20/22/6670" target="_blank">A Study of Accelerometer and Gyroscope Measurements in Physical Life-Log Activities Detection Systems</a></span><br>
+        <span class="authors">A Jalal, MAK Quaid, SB ud din Tahir, K Kim</span><br>
+        <span class="journal">Sensors</span>, <span class="year">2020</span><br>
+        <span class="citation">Cited by 99</span><br>
+        <a href="https://www.mdpi.com/1424-8220/20/22/6670" class="link" target="_blank"><i class="fas fa-file-alt icon"></i>View Article</a>
+    </div>
+
+    <div class="publication">
+        <span class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-031-27409-1_33" target="_blank">Human interaction and classification via k-ary tree hashing over body pose attributes using sports data</a></span><br>
+        <span class="authors">S Trivedi, N Patel, N Faruqui, SB ud din Tahir</span><br>
+        <span class="journal">International Conference on Hybrid Intelligent Systems, Springer</span>, <span class="year">2022</span><br>
+        <span class="citation">Cited by 10</span><br>
+        <a href="https://link.springer.com/chapter/10.1007/978-3-031-27409-1_33" class="link" target="_blank"><i class="fas fa-file-alt icon"></i>View Article</a>
+    </div>
+
+    <div class="publication">
+        <span class="title"><a href="https://www.mdpi.com/1424-8220/22/17/6632" target="_blank">Stochastic Recognition of Human Physical Activities via Augmented Feature Descriptors and Random Forest Model</a></span><br>
+        <span class="authors">SB ud din Tahir, AB Dogar, R Fatima, A Yasin, M Shafiq, JA Khan, M Assam, ...</span><br>
+        <span class="journal">Sensors</span>, <span class="year">2022</span><br>
+        <span class="citation">Cited by 4</span><br>
+        <a href="https://www.mdpi.com/1424-8220/22/17/6632" class="link" target="_blank"><i class="fas fa-file-alt icon"></i>View Article</a>
+    </div>
+
+    <div class="publication">
+        <span class="title"><a href="https://peerj.com/articles/cs-1619/" target="_blank">Hand gesture recognition via deep data optimization and 3D reconstruction</a></span><br>
+        <span class="authors">Z Mustafa,H Nsour, and SB ud din Tahir </span><br>
+        <span class="journal">Electronics</span>, <span class="year">2022</span><br>
+        <span class="citation">Cited by 15</span><br>
+        <a href="https://peerj.com/articles/cs-1619/" class="link" target="_blank"><i class="fas fa-file-alt icon"></i>View Article</a>
+    </div>
+
+   <div class="publication">
+    <span class="title"><a href="https://www.mdpi.com/1424-8220/23/3/1731"  target="_blank">Vehicle Detection and Recognition Approach in Multi-Scale Traffic Monitoring System via Graph-Based Data Optimization</a></span><br>
+    <span class="authors">G Wieczorek, SB ud din Tahir, I Akhter, J Kurek</span><br>
+    <span class="journal">Sensors</span>, <span class="year">2023</span><br>
+    <span class="citation">Cited by 8</span><br>
+    <a href="https://www.mdpi.com/1424-8220/23/3/1731" class="link" target="_blank"><i class="fas fa-file-alt icon"></i>View Article</a>
+
+</div>
+
+
+<div class="publication">
+    <span class="title"><a href="https://ieeexplore.ieee.org/document/9393204"  target="_blank">Daily life log recognition based on automatic features for health care physical exercise via IMU sensors</a></span><br>
+    <span class="authors">SB ud din Tahir, A Jalal, K Kim</span><br>
+    <span class="journal">2021 International Bhurban Conference on Applied Sciences and Technologies</span>, <span class="year">2021</span><br>
+    <span class="citation">Cited by 13</span><br>
+    <a href="https://ieeexplore.ieee.org/document/9393204" class="link" target="_blank"><i class="fas fa-file-alt icon"></i>View Article</a>
+</div>
+
+
+<div class="publication">
+    <span class="title"><a href="https://ieeexplore.ieee.org/document/9393243"  target="_blank">Markerless sensors for physical health monitoring system using ECG and GMM feature extraction</a></span><br>
+    <span class="authors">A Jalal, M Batool, SB ud din Tahir</span><br>
+    <span class="journal">IEEE</span>, <span class="year">2023</span><br>
+    <span class="citation">Cited by 40</span><br>
+    <a href="https://ieeexplore.ieee.org/document/9393243"  target="_blank"><i class="fas fa-file-alt icon"></i>View Article</a>
+</div>
+
+<div class="publication">
+    <span class="title"><a href="https://www.mdpi.com/1424-8220/22/17/6632"  target="_blank">Stochastic Recognition of Human Physical Activities via Augmented Feature Descriptors and Random Forest Model</a></span><br>
+    <span class="authors">SB ud din Tahir, AB Dogar, R Fatima, A Yasin, M Shafiq, JA Khan, M Assam, ...</span><br>
+    <span class="journal">Sensors</span>, <span class="year">2022</span><br>
+    <span class="citation">Cited by 16</span><br>
+    <a href="https://www.mdpi.com/1424-8220/22/17/6632" class="link" target="_blank"><i class="fas fa-file-alt icon"></i>View Article</a>
+</div>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+<p>If you are interested in collaborating on research projects, please feel free to reach out!</p>
+          <form action="mailto:isheikhtaher@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sheikh Badar Ud Din Tahir. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.researchgate.net/profile/your-profile" target="_blank"><i class="fab fa-researchgate"></i></a>
+            <a href="https://scholar.google.com/citations?hl=en&user=f0XUQu8AAAAJ" target="_blank"><i class="fab fa-google"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
