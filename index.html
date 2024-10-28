@@ -76,31 +76,71 @@
         }
 
         /* Navbar Styles */
-        nav {
-            margin-bottom: 2rem; /* Add some spacing below the navbar */
-        }
+nav {
+    margin-bottom: 2rem; /* Spacing below the navbar */
+    padding: 1rem 0; /* Padding for better spacing */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
 
-        .navbar {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3rem; /* Increased spacing for a more spacious feel */
+}
 
-        .navbar li a {
-            background-color: #F0F0F0   ; /* Button background color */
-            color: #2C3E50  ; /* Text color */
-            font-weight: 500;
-            font-size: 1.1rem;
-            padding: 0.5rem 1rem;
-            border-radius: 30px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
+.navbar li {
+    position: relative; /* For pseudo-element positioning */
+}
 
-        .navbar li a:hover {
-            background-color: #0056b3 ; /* Darker color on hover */
-            color: #fff;
-        }
+.navbar li a {
+    color: #ffffff; /* White text color for contrast */
+    font-weight: 500; /* Medium weight for a modern look */
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem; /* Padding for links */
+    border-radius: 30px; /* Rounded link buttons */
+    transition: color 0.3s ease, border 0.3s ease; /* Smooth transition */
+    text-decoration: none; /* Remove underline */
+    text-align: center; /* Center align text */
+    border: 2px solid transparent; /* Transparent border for hover effect */
+}
+
+/* Hover Effects */
+.navbar li a:hover {
+    color: #FFD700; /* Golden color on hover */
+    border: 2px solid #FFD700; /* Underline effect on hover */
+}
+
+/* Add a hover underline effect */
+.navbar li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Adjust as needed */
+    width: 0;
+    height: 2px;
+    background: #FFD700; /* Underline color */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar li a:hover::after {
+    width: 100%; /* Full width on hover */
+    left: 0; /* Align to left */
+}
+
+/* Optional: Adding icons */
+.navbar li a i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items on smaller screens */
+        gap: 1rem; /* Reduce gap */
+    }
+}
+
 
         /* Section Styles */
         .container {
@@ -130,33 +170,63 @@
         }
 
         .research-area {
-            background: #fff;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    background: linear-gradient(135deg, #ffffff, #f8f9fa); /* Subtle gradient for depth */
+    padding: 1.5rem; /* Internal padding */
+    border-radius: 12px; /* Soft rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+    width: 300px; /* Fixed width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    overflow: hidden; /* Prevent overflow */
+    border: 1px solid #e0e0e0; /* Light border for definition */
+}
 
-        .research-area:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
+.research-area:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); /* Deeper shadow on hover */
+}
 
-        .research-area h3 {
-            color: #2980b9;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-        }
+.research-area h3 {
+    color: #2c3e50; /* Darker shade for contrast */
+    font-weight: 700; /* Bold for emphasis */
+    margin-bottom: 0.75rem; /* Space below heading */
+    font-size: 1.5rem; /* Slightly larger font size */
+    text-align: center; /* Center-aligned heading */
+}
 
-        .research-area p {
-            color: #7f8c8d;
-            font-weight: 300;
-        }
+.research-area p {
+    color: #34495e; /* A darker shade for the text */
+    font-weight: 300; /* Light weight for modern look */
+    line-height: 1.6; /* Increased line height for better readability */
+    text-align: center; /* Center-aligned paragraph */
+}
+
+/* Add a hover effect on the text */
+.research-area h3, .research-area p {
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.research-area:hover h3 {
+    color: #3498db; /* Change heading color on hover */
+}
+
+.research-area:hover p {
+    color: #7f8c8d; /* Subtle color change on hover */
+}
+
+/* Optional: Add an animation effect */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.research-area:hover {
+    animation: bounce 0.5s; /* Bounce effect on hover */
+}
+
 
        /* Container styles */
 .container {
-    max-width: 800px; /* Limit the width of the container */
+    max-width: 1050px; /* Limit the width of the container */
     margin: 0 auto; /* Center the container */
     padding: 20px; /* Add padding */
 }
@@ -272,26 +342,53 @@
 
         /* Footer */
         footer {
-            background-color: #008080; /* Teal background */
-            color: #ffffff; /* White text */
-            padding: 1.5rem 0;
-            text-align: center;
-            margin-top: 2rem;
-        }
-        footer p {
-            margin-bottom: 1rem;
-        }
-        .social-icons {
-            margin-top: 1rem;
-        }
-        .social-icons a {
-            color: #ffffff; /* White color for social icons */
-            margin: 0 10px;
-            font-size: 1.5rem;
-        }
-        .social-icons a:hover {
-            color: #f0ad4e; /* Yellow-orange on hover */
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f8f8; /* Adjust background color as needed */
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ddd; /* Neutral background color */
+    color: #555; /* Icon color */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+.social-icons a:hover {
+    background-color: #0073b1; /* Primary hover color */
+    color: #fff; /* White icon color on hover */
+}
+
+.social-icons a:nth-child(2):hover {
+    background-color: #00a300; /* ResearchGate color on hover */
+}
+
+.social-icons a:nth-child(3):hover {
+    background-color: #4285f4; /* Google Scholar color on hover */
+}
+
+.social-icons i {
+    font-size: 20px; /* Adjust size of icon */
+}
+
+.flag-counter {
+    margin-left: auto;
+    padding-left: 20px; /* Optional for spacing from the social icons */
+}
+
+footer p {
+    margin: 0;
+}
+
 
         /* Animation */
         @keyframes fadeIn {
@@ -313,6 +410,7 @@
         html {
             scroll-behavior: smooth;
         }
+
     </style>
 </head>
 <body>
@@ -324,6 +422,7 @@
                 <li><a href="#publications" class="nav-button">Publications</a></li>
                 <li><a href="#contact" class="nav-button">Contact</a></li>
             </ul>
+
         </nav>
 
         <div class="header-content">
@@ -484,18 +583,22 @@
     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
     <button type="submit">Send Message</button>
 </form>
-
+	
 
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Sheikh Badar Ud Din Tahir. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/sheikhbadaruddintahir/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.researchgate.net/profile/Sheikh-Tahir" target="_blank"><i class="fab fa-researchgate"></i></a>
-            <a href="https://scholar.google.com/citations?hl=en&user=f0XUQu8AAAAJ" target="_blank"><i class="fab fa-google"></i></a>
-        </div>
-    </footer>
+ <footer>
+    <p>&copy; 2024 Sheikh Badar Ud Din Tahir. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/sheikhbadaruddintahir/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.researchgate.net/profile/Sheikh-Tahir" target="_blank"><i class="fab fa-researchgate"></i></a>
+        <a href="https://scholar.google.com/citations?hl=en&user=f0XUQu8AAAAJ" target="_blank"><i class="fab fa-google"></i></a>
+    </div>
+    <div class="flag-counter">
+        <a href="https://info.flagcounter.com/ZrS2"><img src="https://s01.flagcounter.com/count2_US/ZrS2/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_Visitors/labels_0/pageviews_0/flags_0/percent_0/" alt="Free counters!" border="0"></a>
+    </div>
+</footer>
+
 </body>
 </html>
