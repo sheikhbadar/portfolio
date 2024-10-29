@@ -2,68 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
     <meta name="description" content="Portfolio of Sheikh Badar, specializing in Statistical Modelling, Sports Analytics, and Machine Learning.">
-	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sheikh Badar | Researcher & Freelance Writer</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-
-
- #about h2 {
-            font-size: 36px;
-            color: #007BFF; /* Primary color for the heading */
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        /* Paragraph styling */
-        #about p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #555555; /* Dark gray for readability */
-            margin-bottom: 15px;
-        }
-
-        /* Highlighted text styling */
-        #about p strong {
-            color: #007BFF; /* Accent color */
-            font-weight: 600;
-        }
-
-        /* Responsive design */
-        @media (max-width: 600px) {
-            #about h2 {
-                font-size: 28px;
-            }
-
-            #about p {
-                font-size: 16px;
-            }
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         /* General Styles */
         * {
             margin: 0;
@@ -78,13 +24,7 @@
             line-height: 1.7;
             overflow-x: hidden;
             transition: all 0.3s ease-in-out;
-		
- margin: 0;
-
-
-
         }
-
 
         h1, h2, h3 {
             font-family: 'Roboto', sans-serif;
@@ -97,108 +37,128 @@
 
         /* Header Styles */
         header {
+            position: relative; /* Establish a positioning context */
+            height: calc(100vh - 250px); /* Adjust height to leave space for the navbar */
             background-color: #008080;
             color: #FFCCCB;
-            padding: 10px ;
             text-align: center;
+            display: flex;
+            flex-direction: column; /* Stack h1 and h2 vertically */
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+            padding-top: 60px; /* Leave space for the fixed navbar */
         }
 
         header h1 {
             font-size: 3rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin: 0; /* Remove default margin */
             color: #FFE4E1; /* Vibrant red */
+            overflow: hidden; /* Hide overflowing text */
+            border-right: 0.15em solid #FFE4E1; /* Blinking cursor effect */
+            white-space: nowrap; /* Keeps text in a single line */
+            position: relative; /* Change to relative for proper animation */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Offset to truly center */
+            width: 30ch; /* Fixed width based on the number of characters */
+            animation: typewriter 3s steps(30) 1s forwards, blink 0.5s step-end infinite; /* Typewriter and blinking cursor animations */
+        }
+
+        header h2 {
+            margin-top: 1.5rem; /* Space between h1 and h2 */
+            font-size: 1.5rem; /* Adjust size as necessary */
+            color: #FFE4E1; /* Example color for h2 */
             opacity: 0; /* Start invisible */
-            transform: scale(0.8); /* Start smaller */
-            animation: fadeInScale 1s forwards; /* Animation name and duration */
+            animation: fadeIn 1s forwards 1; /* Fade-in effect after h1 animation */
         }
 
-        @keyframes fadeInScale {
-            0% {
-                opacity: 0; /* Invisible */
-                transform: scale(0.8); /* Smaller size */
+        @keyframes typewriter {
+            from {
+                width: 0; /* Start with no text */
             }
-            100% {
+            to {
+                width: 30ch; /* End with full text width */
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent; /* Blink effect */
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
                 opacity: 1; /* Fully visible */
-                transform: scale(1); /* Normal size */
             }
-        }
-
-        header p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
         }
 
         /* Navbar Styles */
-nav {
-    margin-bottom: 1rem; /* Spacing below the navbar */
-    padding: 1rem 0; /* Padding for better spacing */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
+        nav {
+            margin-bottom: 1rem; /* Spacing below the navbar */
+            padding: 1rem 0; /* Padding for better spacing */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            position: fixed; /* Keep the navbar fixed */
+            top: 0; /* Stick to the top */
+            width: 100%; /* Full width */
+            background-color: teal; /* Your desired navbar background color */
+            color: white; /* Navbar text color */
+            z-index: 1000; /* Ensure it stays above other content */
+        }
 
-.navbar {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 3rem; /* Increased spacing for a more spacious feel */
-top: 0; /* Stick to the top */
-    left: 0;
-box-sizing: border-box;
-}
+        .navbar {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem; /* Increased spacing for a more spacious feel */
+            top: 0; /* Stick to the top */
+            left: 0;
+            box-sizing: border-box;
+        }
 
-.navbar li {
-    position: relative; /* For pseudo-element positioning */
-}
+        .navbar li {
+            position: relative; /* For pseudo-element positioning */
+        }
 
-.navbar li a {
-    color: #ffffff; /* White text color for contrast */
-    font-weight: 500; /* Medium weight for a modern look */
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem; /* Padding for links */
-    border-radius: 30px; /* Rounded link buttons */
-    transition: color 0.3s ease, border 0.3s ease; /* Smooth transition */
-    text-decoration: none; /* Remove underline */
-    text-align: center; /* Center align text */
-    border: 2px solid transparent; /* Transparent border for hover effect */
-}
+        .navbar li a {
+            color: #ffffff; /* White text color for contrast */
+            font-weight: 500; /* Medium weight for a modern look */
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem; /* Padding for links */
+            border-radius: 30px; /* Rounded link buttons */
+            transition: color 0.3s ease, border 0.3s ease; /* Smooth transition */
+            text-decoration: none; /* Remove underline */
+            text-align: center; /* Center align text */
+            border: 2px solid transparent; /* Transparent border for hover effect */
+        }
 
-/* Hover Effects */
-.navbar li a:hover {
-    color: #FFD700; /* Golden color on hover */
-    border: 2px solid #FFD700; /* Underline effect on hover */
-}
+        /* Hover Effects */
+        .navbar li a:hover {
+            color: #FFD700; /* Golden color on hover */
+            border: 2px solid #FFD700; /* Underline effect on hover */
+        }
 
-/* Add a hover underline effect */
-.navbar {
-    background-color: teal; /* Your desired navbar background color */
-    color: white; /* Navbar text color */
-    padding: 10px 15px;
-    position: fixed; /* Keep the navbar fixed */
-    top: 0; /* Stick to the top */
-    width: 100%; /* Full width */
-    z-index: 1000; /* Ensure it stays above other content */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
-}
+        /* Optional: Adding icons */
+        .navbar li a i {
+            margin-right: 8px; /* Space between icon and text */
+        }
 
-.navbar li a:hover::after {
-    width: 100%; /* Full width on hover */
-    left: 0; /* Align to left */
-}
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column; /* Stack items on smaller screens */
+                gap: 1rem; /* Reduce gap */
+            }
 
-/* Optional: Adding icons */
-.navbar li a i {
-    margin-right: 8px; /* Space between icon and text */
-}
+            header h1 {
+                font-size: 2.5rem; /* Adjust size for smaller screens */
+            }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Stack items on smaller screens */
-        gap: 1rem; /* Reduce gap */
-    }
-}
-
-
+            header h2 {
+                font-size: 1.2rem; /* Adjust size for smaller screens */
+            }
+        }
+ 
         /* Section Styles */
         .container {
             width: 90%;
@@ -210,7 +170,7 @@ box-sizing: border-box;
         .container h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: #2c3e50;
+            color: #333333 ;
         }
 
         .container p {
@@ -218,6 +178,19 @@ box-sizing: border-box;
             color: #7f8c8d;
             margin-bottom: 2rem;
         }
+
+.container i {
+            font-size: 1.1rem;
+            color: #00BFFF;
+            margin-bottom: 2rem;
+        }
+
+.container strong {
+            font-size: 1.1rem;
+            color: #00BFFF;
+            margin-bottom: 2rem;
+        }
+
 
         .grid {
             display: flex;
@@ -293,10 +266,16 @@ box-sizing: border-box;
     background-color: #ffffff;
     border: none; /* Remove border for a cleaner look */
     border-radius: 8px; /* Slightly reduce border radius */
-    padding: 15px; /* Reduce padding for compactness */
-    margin: 15px 0; /* Adjust margins */
+    padding: 10px 15px; /* Reduced padding for compactness */
+    margin: 15px auto; /* Set top/bottom margin to 10px, left/right margin to auto */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 600px; /* Set a smaller max width */
+    height: 220px;
+	width: auto; /* Set a fixed height */
+}
+
+
 }
 
 /* Hover effect for publication cards */
@@ -340,12 +319,15 @@ box-sizing: border-box;
 /* Link button styles */
 .link {
     display: inline-block;
+    width: 100px;   /* Set a small width */
+    height: 30px;  /* Set a small height */
+    background-color: lightblue;
     margin-top: 10px; /* Less margin for compactness */
     text-decoration: none;
     color: #fff;
     background-color: #007bff;
-    padding: 8px 12px; /* Adjust padding */
-    border-radius: 5px; /* Slightly less rounding */
+    padding: 2px 8px; /* Adjust padding */
+    border-radius: 10px; /* Slightly less rounding */
     font-size: 0.9em;
     transition: background-color 0.3s;
 }
@@ -484,7 +466,7 @@ footer p {
 
         <div class="header-content">
 		
-            <h1>Hi I'm Badar! </h1>
+            <h1> Hi I'm Badar! </h1>
 		 <p> <h2> Bringing Novel Ideas to Life through Published Insights <h2/> </p>
 
             <p> <h4> Machine Learning | Sports Analytics | Healthcare | Statistics </h4></p>
