@@ -14,6 +14,54 @@
     <style>
 
 
+ #about h2 {
+            font-size: 36px;
+            color: #007BFF; /* Primary color for the heading */
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Paragraph styling */
+        #about p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555555; /* Dark gray for readability */
+            margin-bottom: 15px;
+        }
+
+        /* Highlighted text styling */
+        #about p strong {
+            color: #007BFF; /* Accent color */
+            font-weight: 600;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            #about h2 {
+                font-size: 28px;
+            }
+
+            #about p {
+                font-size: 16px;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         /* General Styles */
@@ -25,15 +73,21 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f0f4f8;
+            background-color: #f8f1e8;
             color: #333;
             line-height: 1.7;
             overflow-x: hidden;
             transition: all 0.3s ease-in-out;
+		
+ margin: 0;
+
+
+
         }
 
+
         h1, h2, h3 {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin-bottom: 0.75rem;
         }
 
@@ -44,8 +98,8 @@
         /* Header Styles */
         header {
             background-color: #008080;
-            color: #fff;
-            padding: 5rem 0;
+            color: #FFCCCB;
+            padding: 10px ;
             text-align: center;
         }
 
@@ -77,7 +131,7 @@
 
         /* Navbar Styles */
 nav {
-    margin-bottom: 2rem; /* Spacing below the navbar */
+    margin-bottom: 1rem; /* Spacing below the navbar */
     padding: 1rem 0; /* Padding for better spacing */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
@@ -87,6 +141,9 @@ nav {
     display: flex;
     justify-content: center;
     gap: 3rem; /* Increased spacing for a more spacious feel */
+top: 0; /* Stick to the top */
+    left: 0;
+box-sizing: border-box;
 }
 
 .navbar li {
@@ -112,15 +169,15 @@ nav {
 }
 
 /* Add a hover underline effect */
-.navbar li a::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -5px; /* Adjust as needed */
-    width: 0;
-    height: 2px;
-    background: #FFD700; /* Underline color */
-    transition: width 0.3s ease, left 0.3s ease;
+.navbar {
+    background-color: teal; /* Your desired navbar background color */
+    color: white; /* Navbar text color */
+    padding: 10px 15px;
+    position: fixed; /* Keep the navbar fixed */
+    top: 0; /* Stick to the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
 }
 
 .navbar li a:hover::after {
@@ -426,8 +483,11 @@ footer p {
         </nav>
 
         <div class="header-content">
-            <h1>Sheikh Badar Ud Din Tahir</h1>
-            <p>Machine Learning | Sports Analytics | Healthcare | Statistics</p>
+		
+            <h1>Hi I'm Badar! </h1>
+		 <p> <h2> Bringing Novel Ideas to Life through Published Insights <h2/> </p>
+
+            <p> <h4> Machine Learning | Sports Analytics | Healthcare | Statistics </h4></p>
         </div>
     </header>
 
@@ -438,7 +498,7 @@ footer p {
 
             <p>Sheikh Badar Ud Din Tahir is dedicated researcher specializing in <strong> Statistics, healthcare, Sports Analytics, and Machine Learning </strong>. Sheikh leverages data-driven techniques to extract insights in sports, contributing to cutting-edge solutions and advanced methodologies in the field. </p>
 
-<p> An accomplished researcher, he focuses on AI and machine learning, with expertise in predictive modeling, statistical modelling, deep learning, IoT, sensors, and signal processing. Sheikh's impactful research, published in leading journals, has attained over <strong> 530 citations </strong>, reflecting his significant academic and practical contributions.</p>
+<p> An accomplished researcher, he focuses on AI and machine learning, with expertise in predictive modeling, statistical modelling, deep learning, IoT, sensors, and signal processing. Sheikh's impactful research, published in leading journals such as <strong> <i> IEEE, Springers, Wiley, CMC, and PeerJ </i> </strong>, has attained over <strong> 530 citations </strong>, reflecting his significant academic and practical contributions.</p>
         </div>
     </section>
 
@@ -455,7 +515,7 @@ footer p {
                     <p>Investigating machine learning applications in healthcare data analytics, with a focus on predictive modelling and patient outcomes.</p>
                 </div>
                 <div class="research-area">
-                    <h3>Statistical Modelling</h3>
+                    <h3>Statistical Analysis</h3>
                     <p>Utilizing advanced statistical methods for data analysis and interpretation to inform decision-making processes in various sectors.</p>
                 </div>
             </div>
@@ -464,7 +524,7 @@ footer p {
 
     <section id="publications">
         <div class="container">
-            <h1>My Publications</h1>
+            <h2>My Publications</h2>
 
     <div class="publication">
         <span class="title"><a href="https://ieeexplore.ieee.org/document/9426893" target="_blank">Monitoring real-time personal locomotion behaviors over smart indoor-outdoor environments via body-worn sensors</a></span><br>
